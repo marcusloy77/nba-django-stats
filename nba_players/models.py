@@ -1,0 +1,63 @@
+from django.db import models
+# Create your models here.
+
+class Player(models.Model):
+  first_name = models.CharField(max_length=30)
+  last_name = models.CharField(max_length=30)
+  team_name = models.CharField(max_length=20)
+  pos = models.CharField(max_length=5)
+  age = models.IntegerField()
+  gs = models.IntegerField()
+  gp = models.IntegerField()
+  min = models.DecimalField()
+  pts = models.IntegerField()
+  ast = models.IntegerField()
+  treb = models.IntegerField()
+  oreb = models.IntegerField()
+  dreb = models.IntegerField()
+  ftm = models.IntegerField()
+  fta = models.IntegerField()
+  fgm = models.IntegerField()
+  fga = models.IntegerField()
+  thra = models.IntegerField()
+  thrm = models.IntegerField()
+  twa = models.IntegerField()
+  twm = models.IntegerField()
+  tov = models.IntegerField()
+  stl = models.IntegerField()
+  blk = models.IntegerField()
+  fl = models.IntegerField()
+
+
+class Team(models.Model):
+  team_name = models.CharField(max_length=30)
+  location = models.CharField(max_length=30)
+  record = models.CharField(max_length=5)
+  home_record = models.IntegerField()
+  away_record = models.IntegerField()
+  logo = models.ImageField(_(""), upload_to=None, height_field=None, width_field=None, max_length=None)
+  conference_rank = models.IntegerField()
+  overall_rank = models.IntegerField()
+  last_ten_record = models.IntegerField()
+  conference = models.CharField(max_length=10)
+  pts = models.IntegerField()
+  ast = models.IntegerField()
+  reb = models.IntegerField()
+  oreb = models.IntegerField()
+  dreb = models.IntegerField()
+  ftm = models.IntegerField()
+  fta = models.IntegerField()
+  fgm = models.IntegerField()
+  fga = models.IntegerField()
+  thra = models.IntegerField()
+  thrm = models.IntegerField()
+  twa = models.IntegerField()
+  twm = models.IntegerField()
+  tov = models.IntegerField()
+  stl = models.IntegerField()
+  blk = models.IntegerField()
+  fl = models.IntegerField()
+
+
+
+  
